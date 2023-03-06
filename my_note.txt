@@ -1,28 +1,11 @@
-useReducer Hook:
+useContext Hook:
+        allows us to manage state globally.
 
-        const {state, dispatch} = useReducer(reducer, initialState);
+        it is used to store and provide the data to all the components.
 
-        const reducer((state, action) => {
-                return state;
-        })
+        it solves the prop drilling problem in react.
+        it create a store called as context and any component can access it.
 
-        explain:
-        useReducer took 2 argument:
-                reduce function
-                initialState
-        and it gives us
-                state variable and
-                dispatch function
-        
-        works:
-        first of all
-        state variable hold 
-           initial data from initialState
-
-        and reduce method will take the current state and action parameter, 
-                then return new state
-
-        finally dispatch method use to update the state variable.
 
 
         
