@@ -1,7 +1,6 @@
-Props:
-    Props allow you to pass the data from one component to another.
-    Props are read-only
-    Props allow you to pass the data from parent to child components.
+useState Hook:
+    useState hook allows us to track the state of our application.
 
-    Redux and context api are used to pass the data to entire application
-    
+    State refers to the data that needs to be changed.
+
+    State makes the component re-render and show new content.
