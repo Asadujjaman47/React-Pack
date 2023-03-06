@@ -1,12 +1,11 @@
 import "./App.css";
-
+import User from "./components/User";
 function App() {
   return (
-    <>
-      <h1>Using global styling</h1>
-      <h2 className="heading">Another heading</h2>
-      <h3 style={{ backgroundColor: "red", color: "white" }}>here inline</h3>
-    </>
+    <div>
+      <h1>Components In Reacts</h1>
+      <User />
+    </div>
   );
 }
 
