@@ -1,15 +1,12 @@
 import "./App.css";
 
 function App() {
-  const name = "Asad";
-  const element = <p> I am a JSX</p>;
   return (
-    <div className="App">
-      <h1>Hello {name}</h1>
-      <p className="para">{name == "Asad" ? "true" : "false"}</p>
-      <input type="text" placeholder="" name="" />
-      {element}
-    </div>
+    <>
+      <h1>Using global styling</h1>
+      <h2 className="heading">Another heading</h2>
+      <h3 style={{ backgroundColor: "red", color: "white" }}>here inline</h3>
+    </>
   );
 }
 
