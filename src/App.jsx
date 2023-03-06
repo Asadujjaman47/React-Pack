@@ -1,15 +1,18 @@
-import { createContext } from "react";
+import { useRef } from "react";
 import "./App.css";
-import User from "./components/User";
-
-export const userContext = createContext();
 
 function App() {
+  const inputRef = useRef();
+
+  function focusInput() {
+    inputRef.current.focus();
+  }
+
   return (
-    <userContext.Provider value="Asad">
-      <h1>useContext Hook in React</h1> <br />
-      <User />
-    </userContext.Provider>
+    <>
+      <input type="text" ref={inputRef} />
+      <button onClick={focusInput}>Focus Input</button>
+    </>
   );
 }
 

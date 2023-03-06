@@ -1,10 +1,12 @@
-useContext Hook:
-        allows us to manage state globally.
+useRef Hook:
+        useContext hook only returns a single item.
 
-        it is used to store and provide the data to all the components.
+        It returns an object called as current.
 
-        it solves the prop drilling problem in react.
-        it create a store called as context and any component can access it.
+        It allows us to manupluate the DOM
+
+        It helps us to perform validations with forms very easily.
+        
 
 
 
