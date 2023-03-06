@@ -1,10 +1,10 @@
 import "./App.css";
-import User from "./components/User";
+import Parent from "./components/Parent";
+
 function App() {
   return (
     <div>
-      <h1>Components In Reacts</h1>
-      <User />
+      <Parent />
     </div>
   );
 }

@@ -1,4 +1,7 @@
-JSX:
-    JavaScript Extension or JavaScript XML
-    it allows to write html inside js file
-    it makes it easier to manupluate DOM
+Props:
+    Props allow you to pass the data from one component to another.
+    Props are read-only
+    Props allow you to pass the data from parent to child components.
+
+    Redux and context api are used to pass the data to entire application
+    
