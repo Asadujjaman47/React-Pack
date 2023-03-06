@@ -1,2 +1,3 @@
-Forms:
-    onChange event
+MAP:
+    Map method is just an array method
+    that is used to reuse a component.

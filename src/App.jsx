@@ -1,39 +1,38 @@
-import { useState } from "react";
 import "./App.css";
 
 function App() {
-  const [name, setName] = useState("");
-  const [age, setAge] = useState("");
-
-  function handleSubmit() {
-    alert("Your name is " + name + "and you are " + age + " years old");
-  }
+  const users = [
+    {
+      id: 1,
+      name: "Asad",
+    },
+    {
+      id: 2,
+      name: "Akul",
+    },
+    {
+      id: 3,
+      name: "Jaman",
+    },
+  ];
 
   return (
-    <form onSubmit={handleSubmit}>
-      <label htmlFor="name">
-        Enter Your name:
-        <input
-          onChange={(e) => setName(e.target.value)}
-          type="text"
-          name="name"
-          value={name}
-        />
-      </label>
-      <br />
-      <label htmlFor="age">
-        Enter Your age:
-        <input
-          onChange={(e) => setAge(e.target.value)}
-          type="text"
-          name="age"
-          id="age"
-          value={age}
-        />
-      </label>
-      <br />
-      <button type="submit">Submit</button>
-    </form>
+    <>
+      <ul>
+        {users.map((user) => {
+          return (
+            <li key={user.id}>
+              {user.id} | {user.name}
+            </li>
+          );
+        })}
+      </ul>
+
+      {/* pass in component  */}
+      {/* {users.map((user) => {
+        return <component key={user.id} id={user.id} name={user.name} />;
+      })} */}
+    </>
   );
 }
 
