@@ -1,25 +1,28 @@
-useEffect Hook:
-        It us used to perform some effect in your component.
-        It is very useful specially if you want to fetch an API
+useReducer Hook:
 
+        const {state, dispatch} = useReducer(reducer, initialState);
 
-        it run every re-render,
-        // that mean every state change, it will re-render
-                useEffect(() => {
-                        fetch()...
-                })
+        const reducer((state, action) => {
+                return state;
+        })
 
-
-
-        we can control it:
-        second paramenter can also accept an array
-        it call dependancy.
-        // if we pass empty array as an argument, it will run only one.(at the first re-render, of the component)
-                useEffect(() => {
-                        fetch()...
-                },[])
+        explain:
+        useReducer took 2 argument:
+                reduce function
+                initialState
+        and it gives us
+                state variable and
+                dispatch function
         
-        and if we pass any state variable or dependancy,
-        then, it will only run, if the dependancy or state variable changes.
+        works:
+        first of all
+        state variable hold 
+           initial data from initialState
+
+        and reduce method will take the current state and action parameter, 
+                then return new state
+
+        finally dispatch method use to update the state variable.
+
 
         

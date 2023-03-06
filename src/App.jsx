@@ -1,19 +1,22 @@
-import { useEffect, useState } from "react";
+import { useReducer } from "react";
 import "./App.css";
 
 function App() {
-  const [count, setCount] = useState(0);
-  const [calculation, setCalculation] = useState(0);
+  function reducer(state, action) {
+    if (action.type == "INCREMENT") {
+      return state + 1;
+    }
+    return state;
+  }
 
-  useEffect(() => {
-    setCalculation(count + 2);
-  }, [count]);
+  const initialState = 0;
+  const [state, dispatch] = useReducer(reducer, initialState);
 
   return (
     <>
-      <h3>{count}</h3>
-      <button onClick={() => setCount(count + 1)}>count</button>
-      <h2>{calculation}</h2>
+      <h1>useReducer Hook in React</h1> <br />
+      <h2>{state}</h2>
+      <button onClick={() => dispatch({ type: "INCREMENT" })}>Count</button>
     </>
   );
 }
