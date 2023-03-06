@@ -1,7 +1,18 @@
-Routing:
-        $ npm i react-router-dom/
-        $ yarn add react-router-dom
+REDUX:
+        is a state management tool that allows you to store data globally.
 
+
+                                GLOBAL
+                                STORE
+                         /        |          \
+                
+        useSelector()   ->      reducer()    ->    useDispatch() 
+        Fetch State           change state        Trigger Reducer 
+
+
+install:
+        $ yarn add redux
+        $ yarn add react-redux
 
 
 

@@ -1,27 +1,20 @@
 import "./App.css";
 
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-
-import About from "../src/components/About";
-import Contact from "../src/components/Contact";
-import ErrorPage from "../src/components/ErrorPage";
-import Home from "../src/components/Home";
-import Services from "../src/components/Services";
-import Navbar from "./components/Navbar";
+import { useDispatch, useSelector } from "react-redux";
+import { decrement, increment } from "./actions/action";
+import changeInterger from "./reducer/counter";
+changeInterger;
 
 function App() {
+  const state = useSelector((state) => state.changeInterger);
+  const dispatch = useDispatch();
+
   return (
-    <BrowserRouter>
-      <Navbar />
-      <h1>Routing in React</h1>
-      <Routes>
-        <Route path="/" element={<Home />}></Route>
-        <Route path="/about" element={<About />}></Route>
-        <Route path="/contact" element={<Contact />}></Route>
-        <Route path="/services" element={<Services />}></Route>
-        <Route path="*" element={<ErrorPage />}></Route>
-      </Routes>
-    </BrowserRouter>
+    <div style={{ margin: "30px" }}>
+      <button onClick={() => dispatch(increment())}>Increment</button>
+      <h3>{state}</h3>
+      <button onClick={() => dispatch(decrement())}>Decrement</button>
+    </div>
   );
 }
 
