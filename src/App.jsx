@@ -1,17 +1,16 @@
-import { useState } from "react";
 import "./App.css";
 
 function App() {
-  const [count, setCount] = useState(0);
-
-  function CountUpdate() {
-    setCount(count + 1);
+  function clicked(name) {
+    alert("I am clicked! " + name);
   }
 
   return (
     <div className="container">
-      <h1>{count}</h1>
-      <button onClick={CountUpdate}>Count</button>
+      <button onClick={clicked}>Click Me</button>
+
+      {/* for pass argument, use arrow function  */}
+      <button onClick={() => clicked("Asad")}>Click Me</button>
     </div>
   );
 }

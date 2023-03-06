@@ -1,6 +1,6 @@
-useState Hook:
-    useState hook allows us to track the state of our application.
+Events:
+    React also has the same events like, html has
 
-    State refers to the data that needs to be changed.
+            onCLick, onChange etc.
 
-    State makes the component re-render and show new content.
+    for pass argument, use arrow function
