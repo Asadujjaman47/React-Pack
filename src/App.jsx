@@ -1,37 +1,19 @@
+import { useEffect, useState } from "react";
 import "./App.css";
 
 function App() {
-  const users = [
-    {
-      id: 1,
-      name: "Asad",
-    },
-    {
-      id: 2,
-      name: "Akul",
-    },
-    {
-      id: 3,
-      name: "Jaman",
-    },
-  ];
+  const [count, setCount] = useState(0);
+  const [calculation, setCalculation] = useState(0);
+
+  useEffect(() => {
+    setCalculation(count + 2);
+  }, [count]);
 
   return (
     <>
-      <ul>
-        {users.map((user) => {
-          return (
-            <li key={user.id}>
-              {user.id} | {user.name}
-            </li>
-          );
-        })}
-      </ul>
-
-      {/* pass in component  */}
-      {/* {users.map((user) => {
-        return <component key={user.id} id={user.id} name={user.name} />;
-      })} */}
+      <h3>{count}</h3>
+      <button onClick={() => setCount(count + 1)}>count</button>
+      <h2>{calculation}</h2>
     </>
   );
 }
