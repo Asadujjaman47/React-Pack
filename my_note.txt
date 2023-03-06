@@ -1,6 +1,2 @@
-Events:
-    React also has the same events like, html has
-
-            onCLick, onChange etc.
-
-    for pass argument, use arrow function
+Forms:
+    onChange event
